@@ -1,0 +1,3 @@
+[submodule "vscode-makefile-template"]
+	path = vscode-makefile-template
+	url = git@github.com:Locietta/vscode-makefile-template.git
