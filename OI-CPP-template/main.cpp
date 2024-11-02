@@ -1,3 +1,4 @@
+#define _USE_MATH_DEFINES // To use the definition of cmath
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/hash_policy.hpp>
