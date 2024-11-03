@@ -1,4 +1,5 @@
 #define _USE_MATH_DEFINES // To use the definition of cmath
+
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/hash_policy.hpp>
@@ -24,6 +25,15 @@ struct custom_hash {
     size_t operator()(const uint64_t x) const {
         static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();
         return splitmix64(x + FIXED_RANDOM);
+    }
+};
+
+// Used only for basic types, pair and tuple.
+template<typename T>
+struct custom_hash_base {
+    size_t operator()(const T& x) const {
+        static const size_t seed = chrono::steady_clock::now().time_since_epoch().count();
+        return _Hash_bytes(&x, sizeof(x), seed);
     }
 };
 
