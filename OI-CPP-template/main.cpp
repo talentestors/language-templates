@@ -28,7 +28,7 @@ struct custom_hash {
     }
 };
 
-// Used only for basic types, pair and tuple.
+// Used only for basic types, pair, and tuple.
 template<typename T>
 struct custom_hash_base {
     size_t operator()(const T& x) const {
